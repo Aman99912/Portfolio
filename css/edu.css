@@ -1,0 +1,88 @@
+:root{
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+
+}
+
+.edu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: auto;
+    padding-bottom: 5rem;
+}
+.edu .edu-row{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5rem;
+}
+
+.edu-row .edu-column{
+    flex: 1 1 40rem;
+
+}
+.edu-column .title{
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem 2rem;
+}
+
+.edu-box{
+    border-left: .3rem solid var(--main-color);
+}
+.edu-column .edu-content {
+    position: relative;
+    padding-left: 2rem;
+}
+.edu-content .content{
+    position: relative;
+    padding: 1.5rem;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem ;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.edu-content .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+
+}
+.edu-content .content:hover::before{
+     width: 100%;
+}
+
+.edu-content .year{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding-bottom: .5rem;
+}
+.edu-content .year i {
+    padding-right: .5rem;
+}
+.edu-content .year h2{
+    font-size: 3rem;
+}
+.edu-content .content p{
+    font-size: 1.6rem;
+    padding-top: .5rem;
+}
+.edu-box .edu-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--main-color);
+    border-radius: 50%;
+}

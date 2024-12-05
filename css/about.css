@@ -1,0 +1,84 @@
+:root{
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--bg-color);
+    padding-bottom: 6rem;
+}
+.heading{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+
+}
+span{
+    color: var(--main-color);
+}
+.about-img{
+          position: relative;
+          width: 25rem;
+          height: 25rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        
+}
+.about-img img{
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    border: .4rem solid  var(--main-color);
+
+}
+
+.about-img .circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .4rem solid var(--second-bg-color);
+    border-bottom: .4rem solid var(--second-bg-color);
+    border-left: .4rem solid red;
+    border-right: .4rem solid red;
+    animation: spinText 8s linear infinite;
+
+}
+
+.aboutme{
+text-align: center;
+}
+.aboutme h2 {
+    font-size: 3.6rem;
+}
+.aboutme p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+.btn-box.btns{
+    display: inline-block;
+    width: 15rem;
+}
+.btn-box.btns a::before {
+    background: var(--second-bg-color);
+}
+
+
+@keyframes spinText{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
